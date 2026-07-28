@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A. Ammriq | Graphic & Apparel Design Portfolio</title>
+    <meta name="description" content="Portofolio resmi A. Ammriq - Desainer Grafis & Specialist Apparel Design (Logo, Jersey, PDH/PDL, Banner, Branding, & Media Sosial).">
+    <meta name="keywords" content="Ammriq, Graphic Design, Jersey Design, Logo Design, PDH Design, Banner, Branding, Portfolio, Designer Indonesia">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            bg: '#050505',
+                            surface: '#121218',
+                            card: '#181820',
+                            border: '#262636'
+                        },
+                        brand: {
+                            blue: '#3B82F6',
+                            glow: '#60A5FA',
+                            accent: '#2563EB',
+                            darkBlue: '#1E3A8A'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Poppins', 'sans-serif'],
+                        code: ['Fira Code', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-[#050505] text-[#D1D5DB] font-sans antialiased selection:bg-brand-blue selection:text-white relative overflow-x-hidden">
+
+    <!-- Interactive Ambient Glow Background -->
+    <div id="ambient-glow" class="fixed pointer-events-none z-0 w-[600px] h-[600px] rounded-full bg-brand-blue/20 blur-[150px] -top-40 left-1/2 -translate-x-1/2 transition-transform duration-300"></div>
+
+    <!-- Grid lines background effect -->
+    <div class="fixed inset-0 bg-[linear-gradient(to_right,#1f29370f_1px,transparent_1px),linear-gradient(to_bottom,#1f29370f_1px,transparent_1px)] bg-[size:4rem_4rem] pointer-events-none z-0 opacity-40"></div>
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md bg-[#050505]/80 border-b border-[#1f2937]/50" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#home" class="group flex items-center gap-3 text-xl font-bold text-white tracking-wider">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-blue to-cyan-400 p-[2px] shadow-lg shadow-brand-blue/20 group-hover:shadow-brand-blue/40 transition-all duration-300">
+                    <div class="w-full h-full bg-[#050505] rounded-[10px] flex items-center justify-center font-extrabold text-brand-blue group-hover:text-white transition-colors">
+                        A
+                    </div>
+                </div>
+                <span>A. AMMRIQ <span class="text-brand-blue text-xs font-semibold tracking-normal px-2.5 py-1 rounded-full bg-brand-blue/10 border border-brand-blue/20 ml-1">DESIGN</span></span>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#home" class="nav-link text-white hover:text-brand-blue transition-colors relative py-1">Beranda</a>
+                <a href="#about" class="nav-link text-gray-400 hover:text-brand-blue transition-colors relative py-1">Tentang</a>
+                <a href="#services" class="nav-link text-gray-400 hover:text-brand-blue transition-colors relative py-1">Layanan</a>
+                <a href="#portfolio" class="nav-link text-gray-400 hover:text-brand-blue transition-colors relative py-1">Portofolio</a>
+                <a href="#experience" class="nav-link text-gray-400 hover:text-brand-blue transition-colors relative py-1">Pengalaman</a>
+                <a href="#contact" class="nav-link text-gray-400 hover:text-brand-blue transition-colors relative py-1">Kontak</a>
+            </nav>
+
+            <!-- Header Action Button -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://wa.me/6285185793342?text=Halo%20Ammriq,%20saya%20tertarik%20dengan%20jasa%20desain" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-blue hover:bg-blue-600 text-white font-semibold text-sm transition-all shadow-lg shadow-brand-blue/25 hover:shadow-brand-blue/40 hover:-translate-y-0.5 active:translate-y-0">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Konsultasi Gratis</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="menu-btn" class="md:hidden text-gray-300 hover:text-white p-2 rounded-lg focus:outline-none" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0a0a0f] border-b border-gray-800 px-6 py-6 space-y-4">
+            <a href="#home" class="mobile-nav-link block text-white font-medium hover:text-brand-blue">Beranda</a>
+            <a href="#about" class="mobile-nav-link block text-gray-300 font-medium hover:text-brand-blue">Tentang</a>
+            <a href="#services" class="mobile-nav-link block text-gray-300 font-medium hover:text-brand-blue">Layanan</a>
+            <a href="#portfolio" class="mobile-nav-link block text-gray-300 font-medium hover:text-brand-blue">Portofolio</a>
+            <a href="#experience" class="mobile-nav-link block text-gray-300 font-medium hover:text-brand-blue">Pengalaman</a>
+            <a href="#contact" class="mobile-nav-link block text-gray-300 font-medium hover:text-brand-blue">Kontak</a>
+            <a href="https://wa.me/6285185793342?text=Halo%20Ammriq,%20saya%20tertarik%20dengan%20jasa%20desain" target="_blank" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-brand-blue text-white font-bold text-sm">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Konsultasi via WhatsApp</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="relative z-10">
+
+        <!-- HERO SECTION -->
+        <section id="home" class="min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center relative overflow-hidden">
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Left Column Text -->
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    
+                    <!-- Badge -->
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-xs font-semibold tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-brand-blue animate-ping"></span>
+                        <i class="fa-solid fa-paintbrush text-xs"></i> Graphic & Apparel Design Specialist
+                    </div>
+
+                    <!-- Headline -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight">
+                        Desain Visual & Apparel <br class="hidden sm:inline">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue via-cyan-400 to-blue-500">Berkarakter Presisi</span>
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Portofolio kreatif <strong class="text-white">A. Ammriq</strong>. Spesialis perancangan identitas Logo, Jersey Sublimasi Olahraga & Esports, Kemeja PDH/PDL Organisasi, Banner Event, Stiker Die-Cut, hingga Konten Branding Media Sosial.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-brand-blue hover:bg-blue-600 text-white font-bold text-sm transition-all shadow-xl shadow-brand-blue/30 hover:shadow-brand-blue/50 flex items-center justify-center gap-2 hover:-translate-y-0.5">
+                            <i class="fa-solid fa-layer-group"></i>
+                            <span>Jelajahi Portofolio</span>
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#14141f] hover:bg-[#1e1e2d] text-gray-200 hover:text-white font-bold text-sm transition-all border border-gray-800 hover:border-brand-blue/40 flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+                            <span>Konsultasi Project</span>
+                        </a>
+                    </div>
+
+                    <!-- Highlights Stats Bar -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-gray-800/80">
+                        <div class="space-y-1">
+                            <div class="text-2xl font-extrabold text-white">50+</div>
+                            <div class="text-xs text-gray-400">Project Selesai</div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="text-2xl font-extrabold text-cyan-400">100%</div>
+                            <div class="text-xs text-gray-400">Presisi Vektor</div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="text-2xl font-extrabold text-brand-blue">1-3 Hari</div>
+                            <div class="text-xs text-gray-400">Turnaround Cepat</div>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="text-2xl font-extrabold text-white">4+ Tahun</div>
+                            <div class="text-xs text-gray-400">Pengalaman Desain</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Hero Right Column Visual Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <!-- Background Glow Accent -->
+                        <div class="absolute -inset-1 bg-gradient-to-r from-brand-blue to-cyan-400 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition duration-1000"></div>
+                        
+                        <div class="relative rounded-3xl bg-[#121218] border border-gray-800 p-6 sm:p-8 space-y-6 shadow-2xl">
+                            
+                            <div class="flex items-center justify-between pb-4 border-b border-gray-800">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 rounded-2xl bg-brand-blue/20 text-brand-blue border border-brand-blue/30 flex items-center justify-center text-xl font-bold">
+                                        AA
+                                    </div>
+                                    <div>
+                                        <h3 class="text-base font-bold text-white">A. Ammriq</h3>
+                                        <p class="text-xs text-brand-blue font-semibold">Visual & Apparel Designer</p>
+                                    </div>
+                                </div>
+                                <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[11px] font-medium border border-emerald-500/20 flex items-center gap-1.5">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                                    Open Commission
+                                </span>
+                            </div>
+
+                            <!-- Creative Showcase Grid Preview -->
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="p-4 rounded-2xl bg-[#181824] border border-gray-800/80 space-y-2 hover:border-brand-blue/40 transition-colors">
+                                    <i class="fa-solid fa-shirt text-brand-blue text-xl"></i>
+                                    <div class="text-xs font-bold text-white">Jersey Sublimasi</div>
+                                    <div class="text-[10px] text-gray-400">Esports, Futsal, & Running</div>
+                                </div>
+                                <div class="p-4 rounded-2xl bg-[#181824] border border-gray-800/80 space-y-2 hover:border-brand-blue/40 transition-colors">
+                                    <i class="fa-solid fa-shapes text-cyan-400 text-xl"></i>
+                                    <div class="text-xs font-bold text-white">Logo & Branding</div>
+                                    <div class="text-[10px] text-gray-400">Identitas Visual Komunitas</div>
+                                </div>
+                                <div class="p-4 rounded-2xl bg-[#181824] border border-gray-800/80 space-y-2 hover:border-brand-blue/40 transition-colors">
+                                    <i class="fa-solid fa-user-tie text-purple-400 text-xl"></i>
+                                    <div class="text-xs font-bold text-white">Kemeja PDH / PDL</div>
+                                    <div class="text-[10px] text-gray-400">Pakaian Dinas Kampus & Ormas</div>
+                                </div>
+                                <div class="p-4 rounded-2xl bg-[#181824] border border-gray-800/80 space-y-2 hover:border-brand-blue/40 transition-colors">
+                                    <i class="fa-solid fa-bullhorn text-amber-400 text-xl"></i>
+                                    <div class="text-xs font-bold text-white">Banner & Stiker</div>
+                                    <div class="text-[10px] text-gray-400">Cetak High-Res & Die-Cut</div>
+                                </div>
+                            </div>
+
+                            <div class="p-4 rounded-2xl bg-[#0a0a0f] border border-gray-800 flex items-center justify-between text-xs">
+                                <span class="text-gray-400"><i class="fa-solid fa-file-export text-brand-blue mr-1.5"></i> Output File Master:</span>
+                                <span class="text-white font-mono font-semibold">AI, CDR, PSD, SVG, PDF</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-gray-800/60 relative">
+            <div class="max-w-7xl mx-auto space-y-16">
+                
+                <div class="text-center space-y-3">
+                    <span class="text-brand-blue font-semibold text-sm tracking-widest uppercase">Mengenal Saya</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">Tentang A. Ammriq</h2>
+                    <p class="text-gray-400 text-sm max-w-xl mx-auto">
+                        Dedikasi menciptakan desain visual yang menarik, fungsional, dan siap diproduksi tanpa hambatan teknis.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left: Profile Image & Badges -->
+                    <div class="lg:col-span-5 flex flex-col items-center">
+                        <div class="relative w-64 h-64 sm:w-72 sm:h-72">
+                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-brand-blue to-cyan-400 rotate-3 scale-105 opacity-20 blur-lg"></div>
+                            <div class="relative w-full h-full rounded-3xl bg-[#121218] border border-gray-800 overflow-hidden p-3 flex flex-col items-center justify-center text-center shadow-2xl">
+                                <div class="w-32 h-32 rounded-full bg-gradient-to-tr from-brand-blue to-cyan-400 p-[3px] mb-4 shadow-xl">
+                                    <div class="w-full h-full rounded-full bg-[#050505] flex items-center justify-center text-4xl font-extrabold text-brand-blue">
+                                        AA
+                                    </div>
+                                </div>
+                                <h3 class="text-xl font-extrabold text-white">A. Ammriq</h3>
+                                <p class="text-xs text-brand-blue font-semibold mt-1">Graphic & Apparel Designer</p>
+                                <span class="text-[11px] text-gray-400 mt-2">Indonesia 🇮🇩</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Narrative & Skills -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <h3 class="text-2xl font-bold text-white">
+                            Mewujudkan Konsep Menjadi Produk Realistis Siap Cetak & Pakai
+                        </h3>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Saya adalah desainer grafis berpengalaman yang fokus pada perancangan identitas apparel dan media visual promosi. Menggabungkan estetika modern dengan kepraktisan teknis produksi konveksi (sublimasi, bordir komputer, sablon, hingga cetak digital).
+                        </p>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Setiap pengerjaan jersey, kemeja PDH, maupun logo dirancang dengan detail pola skema warna yang presisi sehingga tidak ada degradasi kualitas saat masuk ke mesin cetak maupun jahit.
+                        </p>
+
+                        <!-- Software Tools Grid -->
+                        <div class="pt-4 space-y-3">
+                            <h4 class="text-xs font-bold text-white uppercase tracking-wider">Software Utama Yang Digunakan:</h4>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                                <div class="p-3 rounded-xl bg-[#121218] border border-gray-800 flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-amber-500/10 text-amber-500 flex items-center justify-center font-bold text-xs">Ai</div>
+                                    <div>
+                                        <div class="text-xs font-bold text-white">Illustrator</div>
+                                        <div class="text-[10px] text-gray-400">Vector Master</div>
+                                    </div>
+                                </div>
+                                <div class="p-3 rounded-xl bg-[#121218] border border-gray-800 flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-blue-500/10 text-blue-500 flex items-center justify-center font-bold text-xs">Ps</div>
+                                    <div>
+                                        <div class="text-xs font-bold text-white">Photoshop</div>
+                                        <div class="text-[10px] text-gray-400">Mockup 3D</div>
+                                    </div>
+                                </div>
+                                <div class="p-3 rounded-xl bg-[#121218] border border-gray-800 flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-500 flex items-center justify-center font-bold text-xs">CDR</div>
+                                    <div>
+                                        <div class="text-xs font-bold text-white">CorelDRAW</div>
+                                        <div class="text-[10px] text-gray-400">Layout Cetak</div>
+                                    </div>
+                                </div>
+                                <div class="p-3 rounded-xl bg-[#121218] border border-gray-800 flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center font-bold text-xs">Fg</div>
+                                    <div>
+                                        <div class="text-xs font-bold text-white">Figma</div>
+                                        <div class="text-[10px] text-gray-400">UI / Social</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="py-24 px-4 sm:px-6 lg:px-8 bg-[#08080d] border-t border-gray-800/60 relative">
+            <div class="max-w-7xl mx-auto space-y-16">
+                
+                <div class="text-center space-y-3">
+                    <span class="text-brand-blue font-semibold text-sm tracking-widest uppercase">Layanan Utama</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">Jasa Desain Grafis & Apparel</h2>
+                    <p class="text-gray-400 text-sm max-w-xl mx-auto">
+                        Pilih jenis desain yang sesuai dengan kebutuhan tim, event, organisasi, atau bisnis Anda.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Service 1: Logo -->
+                    <div class="p-6 rounded-2xl bg-[#121218] border border-gray-800 hover:border-brand-blue/50 transition-all duration-300 space-y-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-brand-blue/10 text-brand-blue flex items-center justify-center text-2xl group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-shapes"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-brand-blue transition-colors">Desain Logo</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Pembuatan logo bisnis, esport, atau komunitas dengan pendekatan filosofis, modern, dan fleksibel di berbagai media.
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-1.5 pt-2 border-t border-gray-800">
+                            <li><i class="fa-solid fa-check text-brand-blue mr-1"></i> File Vektor AI/CDR/SVG</li>
+                            <li><i class="fa-solid fa-check text-brand-blue mr-1"></i> Variasi Warna & Monokrom</li>
+                            <li><i class="fa-solid fa-check text-brand-blue mr-1"></i> Hak Cipta Penuh</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 2: Jersey -->
+                    <div class="p-6 rounded-2xl bg-[#121218] border border-gray-800 hover:border-cyan-400/50 transition-all duration-300 space-y-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-400/10 text-cyan-400 flex items-center justify-center text-2xl group-hover:bg-cyan-400 group-hover:text-black transition-colors">
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">Jersey Sublimasi</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Desain kustom jersey futsal, sepakbola, gaming, running, & sepeda lengkap dengan layout pola siap cetak konveksi.
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-1.5 pt-2 border-t border-gray-800">
+                            <li><i class="fa-solid fa-check text-cyan-400 mr-1"></i> Layout Depan/Belakang/Lengan</li>
+                            <li><i class="fa-solid fa-check text-cyan-400 mr-1"></i> Mockup 3D Realistis</li>
+                            <li><i class="fa-solid fa-check text-cyan-400 mr-1"></i> Pola Skala Jahit</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 3: PDH/PDL -->
+                    <div class="p-6 rounded-2xl bg-[#121218] border border-gray-800 hover:border-purple-400/50 transition-all duration-300 space-y-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-purple-400/10 text-purple-400 flex items-center justify-center text-2xl group-hover:bg-purple-400 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-purple-400 transition-colors">PDH & PDL Organisasi</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Pakaian Dinas Harian untuk himpunan mahasiswa, ormas, & instansi lengkap dengan posisi patch bordir komputer.
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-1.5 pt-2 border-t border-gray-800">
+                            <li><i class="fa-solid fa-check text-purple-400 mr-1"></i> Detail Kombinasi Warna</li>
+                            <li><i class="fa-solid fa-check text-purple-400 mr-1"></i> Panduan Bordir Logo</li>
+                            <li><i class="fa-solid fa-check text-purple-400 mr-1"></i> Spesifikasi Bahan</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 4: Banner & Spanduk -->
+                    <div class="p-6 rounded-2xl bg-[#121218] border border-gray-800 hover:border-amber-400/50 transition-all duration-300 space-y-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-amber-400/10 text-amber-400 flex items-center justify-center text-2xl group-hover:bg-amber-400 group-hover:text-black transition-colors">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-amber-400 transition-colors">Banner & Spanduk</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Layout spanduk panggung, backdrop seminar, X-Banner, & Roll-up Banner resolusi tinggi tanpa pecah saat dicetak.
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-1.5 pt-2 border-t border-gray-800">
+                            <li><i class="fa-solid fa-check text-amber-400 mr-1"></i> Resolusi Tinggi CMYK</li>
+                            <li><i class="fa-solid fa-check text-amber-400 mr-1"></i> Bebas Pilih Ukuran Meter</li>
+                            <li><i class="fa-solid fa-check text-amber-400 mr-1"></i> Pilihan Tipografi Tegas</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 5: Sticker -->
+                    <div class="p-6 rounded-2xl bg-[#121218] border border-gray-800 hover:border-pink-400/50 transition-all duration-300 space-y-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-pink-400/10 text-pink-400 flex items-center justify-center text-2xl group-hover:bg-pink-400 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-note-sticky"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-pink-400 transition-colors">Sticker Die-Cut</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Stiker merchandise komunitas, bodi kendaraan, & kemasan produk dengan outline garis potong mesin (cutline).
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-1.5 pt-2 border-t border-gray-800">
+                            <li><i class="fa-solid fa-check text-pink-400 mr-1"></i> Vector Cutline Cut-Contour</li>
+                            <li><i class="fa-solid fa-check text-pink-400 mr-1"></i> Siap Cetak Vinyl/Chromo</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 6: Branding -->
+                    <div class="p-6 rounded-2xl bg-[#121218] border border-gray-800 hover:border-emerald-400/50 transition-all duration-300 space-y-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-400/10 text-emerald-400 flex items-center justify-center text-2xl group-hover:bg-emerald-400 group-hover:text-black transition-colors">
+                            <i class="fa-solid fa-id-card"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-emerald-400 transition-colors">Paket Branding Identity</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Identity kit lengkap berisi logo, kartu nama, kop surat, stempel, & pedoman warna untuk kerapian usaha Anda.
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-1.5 pt-2 border-t border-gray-800">
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1"></i> Brand Color Palette</li>
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-1"></i> Format PDF Ready Print</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 7: Social Media -->
+                    <div class="p-6 rounded-2xl bg-[#121218] border border-gray-800 hover:border-indigo-400/50 transition-all duration-300 space-y-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-400/10 text-indigo-400 flex items-center justify-center text-2xl group-hover:bg-indigo-400 group-hover:text-white transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">Media Sosial Instagram</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Desain feed carousel sambung (seamless), instagram story, & banner promosi digital yang menaikkan interaksi.
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-1.5 pt-2 border-t border-gray-800">
+                            <li><i class="fa-solid fa-check text-indigo-400 mr-1"></i> Seamless Carousel 5-Slide</li>
+                            <li><i class="fa-solid fa-check text-indigo-400 mr-1"></i> File PNG High-Res 4:5</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 8: Print Design -->
+                    <div class="p-6 rounded-2xl bg-[#121218] border border-gray-800 hover:border-red-400/50 transition-all duration-300 space-y-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-red-400/10 text-red-400 flex items-center justify-center text-2xl group-hover:bg-red-400 group-hover:text-white transition-colors">
+                            <i class="fa-solid fa-print"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-white group-hover:text-red-400 transition-colors">Print & Merchandise</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Perancangan brosur, poster event, gantungan kunci, sertifikat, & packaging produk UMKM.
+                        </p>
+                        <ul class="text-xs text-gray-400 space-y-1.5 pt-2 border-t border-gray-800">
+                            <li><i class="fa-solid fa-check text-red-400 mr-1"></i> Bleed & Margin Safety</li>
+                            <li><i class="fa-solid fa-check text-red-400 mr-1"></i> Siap Kirim ke Percetakan</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PORTFOLIO SHOWCASE SECTION -->
+        <section id="portfolio" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-gray-800/60 relative">
+            <div class="max-w-7xl mx-auto space-y-12">
+                
+                <div class="text-center space-y-3">
+                    <span class="text-brand-blue font-semibold text-sm tracking-widest uppercase">Karya Pilihan</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">Galeri Portofolio Desain</h2>
+                    <p class="text-gray-400 text-sm max-w-lg mx-auto">
+                        Klik pada kategori untuk menyaring karya atau klik tombol detail untuk melihat spesifikasi produksi.
+                    </p>
+                </div>
+
+                <!-- Category Filter Buttons -->
+                <div class="flex flex-wrap items-center justify-center gap-2 max-w-3xl mx-auto">
+                    <button class="filter-btn active px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-brand-blue text-white shadow-lg" data-filter="all">
+                        Semua Karya
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-[#121218] text-gray-400 border border-gray-800 hover:text-white hover:border-brand-blue/40" data-filter="jersey">
+                        Jersey
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-[#121218] text-gray-400 border border-gray-800 hover:text-white hover:border-brand-blue/40" data-filter="logo">
+                        Logo
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-[#121218] text-gray-400 border border-gray-800 hover:text-white hover:border-brand-blue/40" data-filter="pdh">
+                        PDH / PDL
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-[#121218] text-gray-400 border border-gray-800 hover:text-white hover:border-brand-blue/40" data-filter="banner">
+                        Banner
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-[#121218] text-gray-400 border border-gray-800 hover:text-white hover:border-brand-blue/40" data-filter="sticker">
+                        Stiker
+                    </button>
+                    <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold transition-all bg-[#121218] text-gray-400 border border-gray-800 hover:text-white hover:border-brand-blue/40" data-filter="social">
+                        Social Media
+                    </button>
+                </div>
+
+                <!-- Portfolio Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
+                    
+                    <!-- Item 1: Esports Jersey -->
+                    <div class="portfolio-item jersey rounded-2xl bg-[#121218] border border-gray-800 overflow-hidden group hover:border-brand-blue/50 transition-all duration-300">
+                        <div class="relative h-64 bg-gradient-to-tr from-[#0b1329] via-[#112244] to-[#1e3a8a] p-6 flex items-center justify-center overflow-hidden">
+                            <div class="w-48 h-52 relative border-2 border-brand-blue/60 bg-[#070e20] rounded-2xl flex flex-col items-center justify-between p-4 shadow-2xl group-hover:scale-105 transition-transform duration-300">
+                                <div class="w-full flex justify-between items-center text-[10px] text-cyan-300 font-bold">
+                                    <span>APEX</span>
+                                    <span>2026</span>
+                                </div>
+                                <div class="my-auto text-center">
+                                    <div class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-cyan-400">
+                                        NEON
+                                    </div>
+                                    <div class="text-[10px] text-gray-400 tracking-widest font-mono">#07</div>
+                                </div>
+                                <div class="w-full h-1.5 bg-gradient-to-r from-brand-blue via-cyan-400 to-blue-600 rounded-full"></div>
+                            </div>
+                            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-brand-blue/20 text-brand-blue text-xs font-semibold border border-brand-blue/30 backdrop-blur-md">
+                                Jersey Sublimasi
+                            </span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-lg font-bold text-white group-hover:text-brand-blue transition-colors">Apex Gaming Esports Jersey</h3>
+                            <p class="text-xs text-gray-400">Desain jersey esports profesional dengan aksen garis geometric neon blue, siap diproduksi sublimasi penuh.</p>
+                            <div class="flex items-center justify-between pt-3 border-t border-gray-800 text-xs">
+                                <span class="text-gray-500">Klien: Apex Guild</span>
+                                <button onclick="openProjectModal(1)" class="text-brand-blue hover:underline font-semibold flex items-center gap-1">
+                                    <span>Lihat Spesifikasi</span> <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Modern Tech Logo -->
+                    <div class="portfolio-item logo rounded-2xl bg-[#121218] border border-gray-800 overflow-hidden group hover:border-brand-blue/50 transition-all duration-300">
+                        <div class="relative h-64 bg-gradient-to-tr from-[#0d0d15] via-[#161625] to-[#1f293d] p-6 flex items-center justify-center overflow-hidden">
+                            <div class="w-36 h-36 rounded-2xl bg-brand-blue/10 border border-brand-blue/40 flex items-center justify-center p-6 shadow-2xl group-hover:rotate-3 transition-transform duration-300">
+                                <svg viewBox="0 0 100 100" class="w-full h-full text-brand-blue fill-current">
+                                    <path d="M50 10 L85 80 L65 80 L50 45 L35 80 L15 80 Z"/>
+                                    <circle cx="50" cy="25" r="8" fill="#60a5fa"/>
+                                </svg>
+                            </div>
+                            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-semibold border border-cyan-500/30 backdrop-blur-md">
+                                Logo & Branding
+                            </span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-lg font-bold text-white group-hover:text-brand-blue transition-colors">Aetheria Tech Rebrand Logo</h3>
+                            <p class="text-xs text-gray-400">Konsep gabungan monogram huruf 'A' dengan simbol konektivitas lingkaran orbit untuk startup IT.</p>
+                            <div class="flex items-center justify-between pt-3 border-t border-gray-800 text-xs">
+                                <span class="text-gray-500">Klien: Aetheria Labs</span>
+                                <button onclick="openProjectModal(2)" class="text-brand-blue hover:underline font-semibold flex items-center gap-1">
+                                    <span>Lihat Spesifikasi</span> <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: PDH Kemeja Himpunan -->
+                    <div class="portfolio-item pdh rounded-2xl bg-[#121218] border border-gray-800 overflow-hidden group hover:border-brand-blue/50 transition-all duration-300">
+                        <div class="relative h-64 bg-gradient-to-tr from-[#0a0f1d] via-[#151f38] to-[#1e293b] p-6 flex items-center justify-center overflow-hidden">
+                            <div class="w-48 h-52 bg-[#1e293b] rounded-2xl border border-gray-700 relative p-4 flex flex-col justify-between shadow-2xl group-hover:scale-105 transition-transform duration-300">
+                                <div class="flex justify-between items-center">
+                                    <div class="w-8 h-8 rounded bg-brand-blue/20 border border-brand-blue/40 text-[9px] font-bold text-white flex items-center justify-center">HIMA</div>
+                                    <div class="w-6 h-4 bg-red-600 rounded-sm flex items-center justify-center text-[7px] font-bold text-white">ID</div>
+                                </div>
+                                <div class="text-center py-2 bg-[#0f172a] rounded-lg border border-gray-800">
+                                    <div class="text-[11px] font-bold text-white">KEMEJA PDH</div>
+                                    <div class="text-[9px] text-brand-blue font-semibold">American Drill</div>
+                                </div>
+                                <div class="h-2 w-full bg-brand-blue/40 rounded"></div>
+                            </div>
+                            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-semibold border border-amber-500/30 backdrop-blur-md">
+                                PDH / PDL
+                            </span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-lg font-bold text-white group-hover:text-brand-blue transition-colors">Kemeja PDH Himpunan Mahasiswa</h3>
+                            <p class="text-xs text-gray-400">Desain PDH organisasi kampus dua tone warna navy-dark grey, lengkap dengan skoder & bordir komputer.</p>
+                            <div class="flex items-center justify-between pt-3 border-t border-gray-800 text-xs">
+                                <span class="text-gray-500">Klien: HIMA Teknik</span>
+                                <button onclick="openProjectModal(3)" class="text-brand-blue hover:underline font-semibold flex items-center gap-1">
+                                    <span>Lihat Spesifikasi</span> <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Grand Event Banner / Spanduk -->
+                    <div class="portfolio-item banner rounded-2xl bg-[#121218] border border-gray-800 overflow-hidden group hover:border-brand-blue/50 transition-all duration-300">
+                        <div class="relative h-64 bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 p-6 flex items-center justify-center overflow-hidden">
+                            <div class="w-full border-2 border-dashed border-cyan-400/50 p-4 rounded-xl text-center space-y-2 bg-black/40 backdrop-blur-sm">
+                                <span class="px-2 py-0.5 rounded bg-cyan-500 text-black font-extrabold text-[10px]">ANNUAL CONVENTION 2026</span>
+                                <h4 class="text-white font-black text-sm tracking-wide">CREATIVE DESIGN FESTIVAL</h4>
+                                <p class="text-[10px] text-cyan-200">28-30 AGUSTUS 2026 | MAIN HALL JAKARTA</p>
+                            </div>
+                            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-semibold border border-purple-500/30 backdrop-blur-md">
+                                Banner & Spanduk
+                            </span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-lg font-bold text-white group-hover:text-brand-blue transition-colors">Backdrop & Banner Festival Kreatif</h3>
+                            <p class="text-xs text-gray-400">Layout spanduk panggung outdoor 5x2.5 meter dengan komposisi tipografi kontras tinggi & cetak CMYK.</p>
+                            <div class="flex items-center justify-between pt-3 border-t border-gray-800 text-xs">
+                                <span class="text-gray-500">Klien: CreativeFest</span>
+                                <button onclick="openProjectModal(4)" class="text-brand-blue hover:underline font-semibold flex items-center gap-1">
+                                    <span>Lihat Spesifikasi</span> <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Die-Cut Community Sticker -->
+                    <div class="portfolio-item sticker rounded-2xl bg-[#121218] border border-gray-800 overflow-hidden group hover:border-brand-blue/50 transition-all duration-300">
+                        <div class="relative h-64 bg-gradient-to-tr from-[#12101a] via-[#1a1226] to-[#2a1b3d] p-6 flex items-center justify-center overflow-hidden">
+                            <div class="w-36 h-36 rounded-full border-4 border-white bg-brand-blue flex flex-col items-center justify-center p-3 text-center shadow-2xl group-hover:rotate-6 transition-transform duration-300">
+                                <i class="fa-solid fa-motorcycle text-white text-3xl mb-1"></i>
+                                <span class="text-white font-black text-xs uppercase">RIDER CLUB</span>
+                                <span class="text-[9px] text-cyan-200 font-bold">EST. 2024</span>
+                            </div>
+                            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 text-xs font-semibold border border-pink-500/30 backdrop-blur-md">
+                                Sticker & Print
+                            </span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-lg font-bold text-white group-hover:text-brand-blue transition-colors">Stiker Komunitas Otomotif</h3>
+                            <p class="text-xs text-gray-400">Desain stiker vinyl die-cut tahan air dengan garis potong mesin (cutline) presisi untuk merchandise.</p>
+                            <div class="flex items-center justify-between pt-3 border-t border-gray-800 text-xs">
+                                <span class="text-gray-500">Klien: Speed Riders</span>
+                                <button onclick="openProjectModal(5)" class="text-brand-blue hover:underline font-semibold flex items-center gap-1">
+                                    <span>Lihat Spesifikasi</span> <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6: Instagram Feeds Carousel -->
+                    <div class="portfolio-item social rounded-2xl bg-[#121218] border border-gray-800 overflow-hidden group hover:border-brand-blue/50 transition-all duration-300">
+                        <div class="relative h-64 bg-gradient-to-tr from-[#05111a] via-[#0d2133] to-[#1b3a57] p-6 flex items-center justify-center overflow-hidden">
+                            <div class="grid grid-cols-2 gap-2 w-full max-w-[200px]">
+                                <div class="h-24 bg-brand-blue/20 rounded-lg border border-brand-blue/40 p-2 text-[9px] text-white flex flex-col justify-between">
+                                    <span class="font-bold">POST 1</span>
+                                    <div class="w-full h-1 bg-brand-blue rounded"></div>
+                                </div>
+                                <div class="h-24 bg-cyan-500/20 rounded-lg border border-cyan-500/40 p-2 text-[9px] text-white flex flex-col justify-between">
+                                    <span class="font-bold">POST 2</span>
+                                    <div class="w-full h-1 bg-cyan-400 rounded"></div>
+                                </div>
+                            </div>
+                            <span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-semibold border border-cyan-500/30 backdrop-blur-md">
+                                Social Media
+                            </span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-lg font-bold text-white group-hover:text-brand-blue transition-colors">Template Feed Instagram UMKM</h3>
+                            <p class="text-xs text-gray-400">Carousel Instagram 5 slide yang tersambung seamlessly untuk meningkatkan interaksi konsumen.</p>
+                            <div class="flex items-center justify-between pt-3 border-t border-gray-800 text-xs">
+                                <span class="text-gray-500">Klien: Kopi Kulture</span>
+                                <button onclick="openProjectModal(6)" class="text-brand-blue hover:underline font-semibold flex items-center gap-1">
+                                    <span>Lihat Spesifikasi</span> <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- WORKFLOW & EXPERIENCE TIMELINE SECTION -->
+        <section id="experience" class="py-24 px-4 sm:px-6 lg:px-8 bg-[#08080d] border-t border-gray-800/60 relative">
+            <div class="max-w-5xl mx-auto space-y-16">
+                
+                <div class="text-center space-y-3">
+                    <span class="text-brand-blue font-semibold text-sm tracking-widest uppercase">Perjalanan Kreatif & Alur Kerja</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">Tahapan Pengerjaan Project</h2>
+                    <p class="text-gray-400 text-sm max-w-lg mx-auto">
+                        Proses terstruktur yang menjamin hasil desain sesuai ekspetasi dan siap pakai di konveksi maupun media digital.
+                    </p>
+                </div>
+
+                <!-- 4 Step Workflow Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="p-6 rounded-2xl bg-[#121218] border border-gray-800 space-y-3 relative">
+                        <div class="w-8 h-8 rounded-full bg-brand-blue/20 text-brand-blue font-bold text-xs flex items-center justify-center">01</div>
+                        <h3 class="text-base font-bold text-white">Brief & Diskusi</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">Pengumpulan referensi warna, jenis font, ukuran, dan kebutuhan khusus produk.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-[#121218] border border-gray-800 space-y-3 relative">
+                        <div class="w-8 h-8 rounded-full bg-cyan-400/20 text-cyan-400 font-bold text-xs flex items-center justify-center">02</div>
+                        <h3 class="text-base font-bold text-white">Konsep & Vektor</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">Pembuatan sketsa awal dan proses vektorisasi presisi tinggi di Illustrator/CorelDRAW.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-[#121218] border border-gray-800 space-y-3 relative">
+                        <div class="w-8 h-8 rounded-full bg-purple-400/20 text-purple-400 font-bold text-xs flex items-center justify-center">03</div>
+                        <h3 class="text-base font-bold text-white">Preview Mockup</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">Presentasi visual 3D realistic mockup untuk evaluasi dan revisi detail.</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-[#121218] border border-gray-800 space-y-3 relative">
+                        <div class="w-8 h-8 rounded-full bg-emerald-400/20 text-emerald-400 font-bold text-xs flex items-center justify-center">04</div>
+                        <h3 class="text-base font-bold text-white">Penyerahan File Master</h3>
+                        <p class="text-xs text-gray-400 leading-relaxed">Pengiriman paket file master cetak (AI, CDR, PDF, PNG) dan panduan warna.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Milestones -->
+                <div class="pt-8 space-y-8">
+                    <h3 class="text-xl font-bold text-white text-center">Rekam Jejak & Milestone</h3>
+                    <div class="relative border-l-2 border-brand-blue/30 ml-4 sm:ml-32 space-y-8">
+                        
+                        <!-- Milestone 1 -->
+                        <div class="relative pl-8 sm:pl-10 group">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-blue border-4 border-[#050505] group-hover:scale-125 transition-transform"></div>
+                            <div class="sm:absolute -left-36 top-1 text-xs font-bold text-brand-blue uppercase tracking-wider mb-2 sm:mb-0">
+                                2024 - SEKARANG
+                            </div>
+                            <div class="p-6 rounded-2xl bg-[#121218] border border-gray-800 hover:border-brand-blue/40 transition-colors space-y-2">
+                                <h3 class="text-lg font-bold text-white">Senior Graphic & Apparel Designer — Freelance</h3>
+                                <p class="text-xs text-brand-blue font-semibold">Ammriq Design Studio</p>
+                                <p class="text-xs text-gray-400 leading-relaxed">
+                                    Melayani pembuatan identitas brand, desain jersey sublimasi premium, kemeja PDH/PDL instansi, dan media promosi cetak untuk 50+ UMKM, komunitas sports, dan lembaga pendidikan.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Milestone 2 -->
+                        <div class="relative pl-8 sm:pl-10 group">
+                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cyan-400 border-4 border-[#050505] group-hover:scale-125 transition-transform"></div>
+                            <div class="sm:absolute -left-36 top-1 text-xs font-bold text-cyan-400 uppercase tracking-wider mb-2 sm:mb-0">
+                                2022 - 2024
+                            </div>
+                            <div class="p-6 rounded-2xl bg-[#121218] border border-gray-800 hover:border-brand-blue/40 transition-colors space-y-2">
+                                <h3 class="text-lg font-bold text-white">Lead Designer Apparel & Merchandise</h3>
+                                <p class="text-xs text-cyan-400 font-semibold">Vendor Sublimasi & Konveksi lokal</p>
+                                <p class="text-xs text-gray-400 leading-relaxed">
+                                    Memimpin penataan layout pola jersey, pembagian layer warna cetak sublimasi, penyesuaian ukuran mock-up, dan pengawasan kualitas file vektor siap jahit.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-gray-800/60 relative">
+            <div class="max-w-7xl mx-auto space-y-16">
+                
+                <div class="text-center space-y-3">
+                    <span class="text-brand-blue font-semibold text-sm tracking-widest uppercase">Mulai Kerjasama</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">Mari Diskusikan Project Anda</h2>
+                    <p class="text-gray-400 text-sm max-w-lg mx-auto">Kirim pesan langsung ke WhatsApp atau gunakan formulir di bawah untuk konsultasi cepat.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    
+                    <!-- Left: Direct Contact Information Cards -->
+                    <div class="lg:col-span-5 space-y-6">
+                        
+                        <div class="p-6 rounded-2xl bg-[#121218] border border-gray-800 space-y-6">
+                            <h3 class="text-xl font-bold text-white mb-2">Kontak Langsung</h3>
+                            
+                            <!-- WhatsApp -->
+                            <a href="https://wa.me/6285185793342?text=Halo%20Ammriq,%20saya%20tertarik%20dengan%20jasa%20desain" target="_blank" class="flex items-center gap-4 p-4 rounded-xl bg-[#181824] border border-gray-800 hover:border-emerald-500/50 hover:bg-emerald-950/20 transition-all group">
+                                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-gray-400">WhatsApp Fast Response</div>
+                                    <div class="text-sm font-bold text-white">Chat Langsung WhatsApp</div>
+                                </div>
+                            </a>
+
+                            <!-- Email -->
+                            <a href="mailto:ammriq0@gmail.com" class="flex items-center gap-4 p-4 rounded-xl bg-[#181824] border border-gray-800 hover:border-brand-blue/50 hover:bg-blue-950/20 transition-all group">
+                                <div class="w-12 h-12 rounded-xl bg-brand-blue/10 text-brand-blue flex items-center justify-center text-2xl group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-gray-400">Email Resmi</div>
+                                    <div class="text-sm font-bold text-white">ammriq0@gmail.com</div>
+                                </div>
+                            </a>
+
+                            <!-- Working hours -->
+                            <div class="pt-4 border-t border-gray-800/80 text-xs space-y-2">
+                                <div class="flex items-center justify-between text-gray-400">
+                                    <span><i class="fa-regular fa-clock text-brand-blue mr-2"></i> Jam Kerja</span>
+                                    <span class="text-white font-medium">Senin - Sabtu (08.00 - 20.00 WIB)</span>
+                                </div>
+                                <div class="flex items-center justify-between text-gray-400">
+                                    <span><i class="fa-solid fa-bolt text-amber-400 mr-2"></i> Estimasi Pengerjaan</span>
+                                    <span class="text-white font-medium">1 - 3 Hari Kerja</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Right: Interactive Project Inquiry Form -->
+                    <div class="lg:col-span-7">
+                        <form id="contact-form" class="p-8 rounded-2xl bg-[#121218] border border-gray-800 space-y-6">
+                            <h3 class="text-xl font-bold text-white">Formulir Konsultasi Desain</h3>
+                            
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-300 mb-2">Nama Lengkap *</label>
+                                    <input type="text" id="form-name" required placeholder="Contoh: Budi Pratama" class="w-full px-4 py-3 rounded-xl bg-[#0a0a0f] border border-gray-800 text-white text-sm focus:border-brand-blue focus:outline-none transition-colors">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-300 mb-2">Nomor WhatsApp / HP *</label>
+                                    <input type="tel" id="form-phone" required placeholder="081234567890" class="w-full px-4 py-3 rounded-xl bg-[#0a0a0f] border border-gray-800 text-white text-sm focus:border-brand-blue focus:outline-none transition-colors">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-300 mb-2">Jenis Layanan</label>
+                                    <select id="form-service" class="w-full px-4 py-3 rounded-xl bg-[#0a0a0f] border border-gray-800 text-white text-sm focus:border-brand-blue focus:outline-none transition-colors">
+                                        <option value="Logo Design">Logo Design</option>
+                                        <option value="Jersey Design">Jersey Design (Olahraga/Esports)</option>
+                                        <option value="PDH & PDL Design">Kemeja PDH / PDL Organisasi</option>
+                                        <option value="Banner & Spanduk">Banner & Spanduk Event</option>
+                                        <option value="Sticker Design">Sticker & Merchandise</option>
+                                        <option value="Branding Package">Paket Branding Identity</option>
+                                        <option value="Social Media Design">Media Sosial Instagram Feed</option>
+                                        <option value="Print Design">Print Design (Brosur/Poster)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-gray-300 mb-2">Estimasi Timeline</label>
+                                    <select id="form-timeline" class="w-full px-4 py-3 rounded-xl bg-[#0a0a0f] border border-gray-800 text-white text-sm focus:border-brand-blue focus:outline-none transition-colors">
+                                        <option value="Sangat Mendesak (1-2 Hari)">Mendesak (1-2 Hari)</option>
+                                        <option value="Standar (3-5 Hari)">Standar (3-5 Hari)</option>
+                                        <option value="Santai (1 Minggu+)">Santai (1 Minggu+)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-2">Detail Brief / Catatan Project</label>
+                                <textarea id="form-message" rows="4" required placeholder="Jelaskan secara singkat mengenai warna, tulisan, konsep, atau referensi yang Anda inginkan..." class="w-full px-4 py-3 rounded-xl bg-[#0a0a0f] border border-gray-800 text-white text-sm focus:border-brand-blue focus:outline-none transition-colors"></textarea>
+                            </div>
+
+                            <div class="flex flex-col sm:flex-row items-center gap-4 pt-2">
+                                <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-blue hover:bg-blue-600 text-white font-semibold text-sm transition-all shadow-lg shadow-brand-blue/30 flex items-center justify-center gap-2">
+                                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                                    <span>Kirim Langsung ke WhatsApp</span>
+                                </button>
+                                <span class="text-xs text-gray-500">Otomatis terformat rapi di obrolan WA</span>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#030305] border-t border-gray-800/80 py-12 px-4 sm:px-6 lg:px-8 text-xs text-gray-400">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+            
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-brand-blue flex items-center justify-center font-bold text-white text-sm">
+                    A
+                </div>
+                <div>
+                    <div class="text-white font-bold text-sm">A. Ammriq Portfolio</div>
+                    <div>Graphic & Apparel Design Specialist</div>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-6">
+                <a href="#home" class="hover:text-brand-blue transition-colors">Beranda</a>
+                <a href="#about" class="hover:text-brand-blue transition-colors">Tentang</a>
+                <a href="#services" class="hover:text-brand-blue transition-colors">Layanan</a>
+                <a href="#portfolio" class="hover:text-brand-blue transition-colors">Portofolio</a>
+                <a href="#experience" class="hover:text-brand-blue transition-colors">Pengalaman</a>
+                <a href="#contact" class="hover:text-brand-blue transition-colors">Kontak</a>
+            </div>
+
+            <div class="text-center md:text-right space-y-1">
+                <div>© 2026 A. Ammriq. All Rights Reserved.</div>
+                <div class="text-[11px] text-gray-600">Built for GitHub Pages & Web Production.</div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Back to Top Floating Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-brand-blue text-white flex items-center justify-center shadow-xl hover:bg-blue-600 transition-all opacity-0 pointer-events-none z-40">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- PROJECT DETAIL MODAL -->
+    <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-[#121218] border border-gray-800 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 relative space-y-6 shadow-2xl">
+            
+            <button onclick="closeProjectModal()" class="absolute top-6 right-6 text-gray-400 hover:text-white p-2 rounded-lg bg-[#181824]">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+
+            <div id="modal-content">
+                <!-- Dynamic Content Injected via JS -->
+            </div>
+
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION SYSTEM -->
+    <div id="toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 px-6 py-3 rounded-xl bg-brand-blue text-white text-xs font-semibold shadow-2xl transition-all opacity-0 pointer-events-none flex items-center gap-2">
+        <i class="fa-solid fa-check-circle"></i>
+        <span id="toast-message">Pesan Terkirim</span>
+    </div>
+
+    <!-- Javascript File -->
+    <script src="js/script.js"></script>
+</body>
+</html>
