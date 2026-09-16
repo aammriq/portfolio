@@ -293,7 +293,7 @@ Saya ingin mengajukan project desain dengan detail berikut:
 
 Mohon info estimasi biaya dan kelanjutan ketersediaan project. Terima kasih!`;
 
-        const waUrl = `https://wa.me/6285185793342?text=${encodeURIComponent(text)}`;
+        const waUrl = `https://wa.me/6285735529332?text=${encodeURIComponent(text)}`;
         window.open(waUrl, "_blank");
         showToast("Membuka obrolan WhatsApp...");
     });
