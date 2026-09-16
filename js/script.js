@@ -244,7 +244,7 @@ function openProjectModal(projectId) {
             <!-- Call to Action -->
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4 border-t border-gray-800">
                 <span class="text-xs text-gray-400">Tertarik dengan style & kualitas desain ini?</span>
-                <a href="https://wa.me/6285185793342?text=Halo%20Ammriq,%20saya%20tertarik%20dengan%20style%20desain%20${encodeURIComponent(data.title)}" target="_blank" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-brand-blue hover:bg-blue-600 text-white font-bold text-xs transition-all shadow-lg flex items-center justify-center gap-2">
+                <a href="https://wa.me/6285735529332?text=Halo%20Ammriq,%20saya%20tertarik%20dengan%20style%20desain%20${encodeURIComponent(data.title)}" target="_blank" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-brand-blue hover:bg-blue-600 text-white font-bold text-xs transition-all shadow-lg flex items-center justify-center gap-2">
                     <i class="fa-brands fa-whatsapp text-sm"></i> Order Konsep Ini via WA
                 </a>
             </div>
